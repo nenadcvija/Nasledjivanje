@@ -1,26 +1,64 @@
 package nasledjivanje;
 
+import apstraktna.klasa.DodatnaOprema;
+import apstraktna.klasa.Kablovi;
+
 public class Glavna {
 
 	public static void main(String[] args) {
+	
+		Oprema oprema = new Oprema();
+			oprema.proizvodjac = "Nike";
+			oprema.barCode();
+			Oprema.alaJeLepaOvaOprema();
 		
-		SvemirskiObjekat objekat = new SvemirskiObjekat("NGC 1290", 20000000);
+		Oprema o2 = new Oprema("Adidas",56);
+		
+		KompjuterskaOprema komp = new KompjuterskaOprema();
+		
+			komp.tipOpreme = "Laptop";
+			komp.proizvodjac = "Lenovo";
+			komp.daLiJeNovo = true;
+			komp.cena = 450;
 			
-			objekat.dobrodosli(objekat.ime);
+			komp.ukljuci();
+			komp.barCode();
+			komp.alaJeLepaOvaOprema();
+		
+		KompjuterskaOprema	komp2 = new KompjuterskaOprema("HP",250,"Laptop",false);
+		
+		komp2.barCode();
+		System.out.println("Cena kompa 2 je: " + komp2.cena + " evra");
+		
+		BiciklistickaOprema bajs = new BiciklistickaOprema();
+			
+			bajs.daLiJeDeciji = false;
+			bajs.proizvodjac = "BMX";
+			
+			bajs.vozi();
+			bajs.barCode();
 		
 		
-		Planeta planeta = new Planeta("Zemlja", 678880,true);
+		HardDisc hdd = new HardDisc();
+			
+			hdd.daLiJeSSD = true;
+			hdd.daLiJeNovo = true;
+			hdd.cena = 75;
+			
+			hdd.ukljuci();
+			hdd.defragmentiraj();
+			hdd.barCode();
+			
 		
-		
-			System.out.println("Da li na planeti ima vode? Odgovor: " + planeta.voda);
-			System.out.println("Vi ste na planeti " + planeta.ime);
-			planeta.dobrodosli(planeta.ime);
-		
-
-		
-
-		
-		
+	Kablovi kablovi = new Kablovi();
+	kablovi.dodatak = "konektori";
+	kablovi.modelKabla = "RJ256";
+			
+			
+			
+			
+			
+			
 		
 
 	}
