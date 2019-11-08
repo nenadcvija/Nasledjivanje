@@ -1,6 +1,8 @@
 package nasledjivanje;
 
-public final class HardDisc extends KompjuterskaOprema{
+import interfejs.Iconstruct;
+
+public final class HardDisc extends KompjuterskaOprema implements Iconstruct{
 	
 	// final class se ne moze naslediti
 	
@@ -20,6 +22,18 @@ public final class HardDisc extends KompjuterskaOprema{
 	@Override 
 	public void barCode() {
 		System.out.println("HDD bar code je ovde"); 
+	}
+
+	@Override
+	public void install() {
+		System.out.println("Instaliram hard disk....");
+		
+	}
+
+	@Override
+	public void unistall() {
+		System.out.println("Razlupao sam hard disk....");
+		
 	}
 
 }
